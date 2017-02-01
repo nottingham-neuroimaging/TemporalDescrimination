@@ -1,6 +1,6 @@
 #include <SPI.h>
 
-const int delay_length = 3;
+const int delay_length = 4;
 
 int piezoPins[] = {7, 8};
 
@@ -34,8 +34,8 @@ void serialEvent()
       start_delay =atoi(input_1);
    }
    offset = 1000*(long)start_delay;
-   Serial.print(offset,DEC);
-   Serial.print('\n');
+//   Serial.print(offset);
+//   Serial.print('\n');
    
    if (offset < 0){
       offset=offset*-1;
